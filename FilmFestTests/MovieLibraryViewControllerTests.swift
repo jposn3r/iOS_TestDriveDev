@@ -11,7 +11,7 @@ import XCTest
 @testable import FilmFest
 class MovieLibraryViewControllerTests: XCTestCase {
     
-    var sut : MovieLibraryViewController!
+    var sut : FilmFest.MovieLibraryViewController!
     
     override func setUp() {
         super.setUp()
@@ -19,7 +19,7 @@ class MovieLibraryViewControllerTests: XCTestCase {
         
         let storyboard = UIStoryboard.init(name: "Main", bundle: nil)
         sut = storyboard.instantiateViewController(withIdentifier: "MovieLibraryVC")
-            as! MovieLibraryViewController
+            as! FilmFest.MovieLibraryViewController
         
         // Manually trigger the viewDidLoad() Method
         _ = sut.view

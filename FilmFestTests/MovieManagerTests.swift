@@ -7,7 +7,7 @@
 //
 
 import XCTest
-
+@testable import FilmFest
 class MovieManagerTests: XCTestCase {
     
     var movieManager: MovieManager!
@@ -32,7 +32,7 @@ class MovieManagerTests: XCTestCase {
      }
     
     func testMoviesToSeeCount_ShouldBeOneAfterMovieAdded() {
-        movieManager.addMovieToSee(movie: Movie(title: "Moana") )
+        movieManager.addMovieToSee(movie: Movie(title: "Moana"))
         XCTAssertEqual(movieManager.moviesToSeeCount, 1)
     }
     
