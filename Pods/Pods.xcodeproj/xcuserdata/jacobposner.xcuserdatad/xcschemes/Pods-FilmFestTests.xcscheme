@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D254BC561E37B1EC00212834"
-               BuildableName = "FilmFest.app"
-               BlueprintName = "FilmFest"
-               ReferencedContainer = "container:FilmFest.xcodeproj">
+               BlueprintIdentifier = "B30F349B44F0DF1AC355103CDE1F8D39"
+               BuildableName = "Pods_FilmFestTests.framework"
+               BlueprintName = "Pods-FilmFestTests"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D254BC6A1E37B1EC00212834"
-               BuildableName = "FilmFestTests.xctest"
-               BlueprintName = "FilmFestTests"
-               ReferencedContainer = "container:FilmFest.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D254BC561E37B1EC00212834"
-            BuildableName = "FilmFest.app"
-            BlueprintName = "FilmFest"
-            ReferencedContainer = "container:FilmFest.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D254BC561E37B1EC00212834"
-            BuildableName = "FilmFest.app"
-            BlueprintName = "FilmFest"
-            ReferencedContainer = "container:FilmFest.xcodeproj">
+            BlueprintIdentifier = "B30F349B44F0DF1AC355103CDE1F8D39"
+            BuildableName = "Pods_FilmFestTests.framework"
+            BlueprintName = "Pods-FilmFestTests"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,16 +60,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D254BC561E37B1EC00212834"
-            BuildableName = "FilmFest.app"
-            BlueprintName = "FilmFest"
-            ReferencedContainer = "container:FilmFest.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
