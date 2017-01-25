@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main View Controller-->
+        <!--Movie Library View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="FilmFest" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MovieLibraryVC" id="BYZ-38-t0r" customClass="MovieLibraryViewController" customModule="FilmFest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -24,7 +24,29 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rAw-BY-cIo" customClass="DropShadowView" customModule="FilmFest" customModuleProvider="target">
                                 <rect key="frame" x="20" y="122" width="374" height="578"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="6eY-xP-xoU">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="578"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="movieCellID" id="xlc-ZP-T1Z">
+                                                <rect key="frame" x="0.0" y="28" width="374" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xlc-ZP-T1Z" id="l4N-KG-PuY">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </tableViewCellContentView>
+                                            </tableViewCell>
+                                        </prototypes>
+                                    </tableView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="6eY-xP-xoU" firstAttribute="top" secondItem="rAw-BY-cIo" secondAttribute="top" id="LEz-M7-D94"/>
+                                    <constraint firstAttribute="bottom" secondItem="6eY-xP-xoU" secondAttribute="bottom" id="jgP-5U-Uiy"/>
+                                    <constraint firstAttribute="trailing" secondItem="6eY-xP-xoU" secondAttribute="trailing" id="uFh-Ik-3Mh"/>
+                                    <constraint firstItem="6eY-xP-xoU" firstAttribute="leading" secondItem="rAw-BY-cIo" secondAttribute="leading" id="ztA-WT-uLu"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                         <size key="value" width="5" height="7"/>
@@ -34,8 +56,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Film Fest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI9-jI-s8i">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Film Fest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GI9-jI-s8i">
                                 <rect key="frame" x="133" y="37" width="149" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="149" id="Iha-R5-KVM"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Cochin-BoldItalic" family="Cochin" pointSize="37"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -43,20 +68,24 @@
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="GI9-jI-s8i" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="113" id="4K1-Mm-1Qm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rAw-BY-cIo" secondAttribute="bottom" constant="36" id="CKO-Tb-dWV"/>
                             <constraint firstItem="rAw-BY-cIo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="G99-js-7gb"/>
-                            <constraint firstItem="GI9-jI-s8i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="0.5" id="KMc-bY-8xg"/>
+                            <constraint firstItem="GI9-jI-s8i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="Pje-6E-I6s"/>
                             <constraint firstItem="rAw-BY-cIo" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="TqB-Bw-WYU"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GI9-jI-s8i" secondAttribute="trailing" constant="112" id="aGD-vW-C1R"/>
+                            <constraint firstItem="GI9-jI-s8i" firstAttribute="centerX" secondItem="rAw-BY-cIo" secondAttribute="centerX" id="Wrg-55-VlX"/>
                             <constraint firstItem="rAw-BY-cIo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="102" id="jNS-m6-RP6"/>
-                            <constraint firstItem="GI9-jI-s8i" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="17" id="vcd-Om-gQI"/>
+                            <constraint firstItem="rAw-BY-cIo" firstAttribute="top" secondItem="GI9-jI-s8i" secondAttribute="bottom" constant="34" id="sDw-Ui-cl6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dataService" destination="mbM-lE-gM7" id="RKE-Kj-e1u"/>
+                        <outlet property="movieTableView" destination="6eY-xP-xoU" id="twV-HY-1FE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <customObject id="mbM-lE-gM7" userLabel="MovieLibraryDataService" customClass="MovieLibraryDataService" customModule="FilmFest" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+            <point key="canvasLocation" x="31.884057971014496" y="37.5"/>
         </scene>
     </scenes>
 </document>
