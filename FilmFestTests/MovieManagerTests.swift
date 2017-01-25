@@ -106,6 +106,21 @@ class MovieManagerTests: XCTestCase {
         XCTAssertNotEqual(movie1, movie2)
     }
     
+    func testClearAllArrayItems_ShouldReturnArrayCountsOfZero() {
+        movieManager.addMovieToSee(movie: Movie(title: "Action", releaseDate: "0/0/0"))
+        movieManager.addMovieToSee(movie: Movie(title: "Action", releaseDate: "1/1/1"))
+        
+        movieManager.favoriteMovieAtIndex(index: 0)
+        
+        XCTAssertEqual(movieManager.moviesToSeeCount, 1)
+        XCTAssertEqual(movieManager.moviesSeenCount, 1)
+        
+        movieManager.clearArrays()
+        
+        XCTAssertEqual(movieManager.moviesToSeeCount, 0)
+        XCTAssertEqual(movieManager.moviesSeenCount, 0)
+        
+    }
     
     
     
